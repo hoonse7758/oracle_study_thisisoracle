@@ -1,0 +1,49 @@
+
+
+--
+SELECT *
+FROM SYS.DBA_USERS
+WHERE 1 = 1
+;
+
+--
+SELECT *
+FROM SYS.DBA_TABLES
+WHERE 1 = 1
+AND OWNER = 'HR'
+;
+
+--
+SELECT *
+FROM SYS.DBA_TAB_COLUMNS
+WHERE 1 = 1
+AND OWNER = 'HR'
+ORDER BY TABLE_NAME
+       , COLUMN_ID
+;
+
+--
+SELECT department_name 
+FROM hr.departments
+;
+
+
+
+--
+CREATE USER sqldb IDENTIFIED BY 1234
+    DEFAULT TABLESPACE USERS
+    TEMPORARY TABLESPACE TEMP
+;
+
+--
+GRANT CONNECT
+    , RESOURCE
+    , DBA 
+TO sqldb
+;
+
+
+-- 
+
+
+

@@ -1,0 +1,63 @@
+
+SQL*Loader: Release 11.2.0.2.0 - Production on 일 2월 28 01:26:49 2021
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   movieLoader.ctl
+Character Set UTF8 specified for all input.
+
+Data File:      movieRecords.dat
+  Bad File:     movieRecords.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table MOVIETBL, loaded from every logical record.
+Insert option in effect for this table: INSERT
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+ID                                  FIRST     4   ,       CHARACTER            
+TITLE                                NEXT    80   ,       CHARACTER            
+DIRECTOR                             NEXT    80   ,       CHARACTER            
+STAR                                 NEXT    80   ,       CHARACTER            
+SCRIPTFNAME                          NEXT    80   ,       CHARACTER            
+  (FILLER FIELD)
+FILMFNAME                            NEXT    80   ,       CHARACTER            
+  (FILLER FIELD)
+SCRIPT                            DERIVED     *  EOF      CHARACTER            
+    Dynamic LOBFILE.  Filename in field SCRIPTFNAME
+    Character Set UTF8 specified for all input.
+FILM                              DERIVED     *  EOF      CHARACTER            
+    Dynamic LOBFILE.  Filename in field FILMFNAME
+    Character Set UTF8 specified for all input.
+
+
+Table MOVIETBL:
+  3 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                  26624 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:             3
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on 일 2월  28 01:26:49 2021
+Run ended on 일 2월  28 01:26:57 2021
+
+Elapsed time was:     00:00:07.91
+CPU time was:         00:00:02.14

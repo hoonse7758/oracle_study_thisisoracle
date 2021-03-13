@@ -1,0 +1,12 @@
+
+--
+SELECT * FROM dba_users;
+
+--
+CREATE USER mydb IDENTIFIED BY "1234"
+DEFAULT TABLESPACE "USERS";
+
+--
+GRANT CONNECT, RESOURCE TO mydb;
+
+-- 
